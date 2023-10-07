@@ -1,0 +1,483 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="js/app.min.js"></script>
+    <title>Корзина</title>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/svgicons/logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <div class="header__menu">
+                <a href="lk.html" class="header__lk">
+                    <img src="img/svgicons/lk.svg" alt="">
+                    <p>Кабинет</p>
+                </a>
+                <div class="header__links">
+                    <a href="#">О компании</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Доставка</a>
+                    <a href="#">Контакты</a>
+                    <div class="language">
+                        Ru
+                    </div>
+                </div>
+                <a href="#" class="header__cart">
+                    <img src="img/svgicons/cart.svg" alt="">
+                    <div class="text">
+                        <p>В корзине</p>
+                        <p id="total" class="sum">12 329 ₽</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <svg display="none">
+                <symbol id="delete" viewBox="0 0 21 22">
+                    <g>
+                        <path d="M19.6429 3.14287H14.1429V2.35714C14.1429 1.05533 13.0876 0 11.7858 0H8.64289C7.34108 0 6.28575 1.05533 6.28575 2.35714V3.14287H0.78573C0.351776 3.14287 0 3.49464 0 3.9286C0 4.36255 0.351822 4.71428 0.78573 4.71428H1.63978L3.14287 21.2858C3.17994 21.6915 3.52112 22.0016 3.92861 22H16.5001C16.9075 22.0017 17.2487 21.6916 17.2858 21.2858L18.7888 4.71428H19.6429C20.0769 4.71428 20.4287 4.3625 20.4287 3.92855C20.4287 3.4946 20.0768 3.14287 19.6429 3.14287ZM7.85716 2.35714C7.85716 1.92319 8.20894 1.57141 8.64289 1.57141H11.7858C12.2197 1.57141 12.5715 1.92319 12.5715 2.35714V3.14287H7.85721L7.85716 2.35714ZM15.7827 20.4285H4.64597L3.22146 4.71428H17.2111L15.7827 20.4285Z"/>
+                        <path d="M7.85751 18.019C7.85742 18.018 7.85737 18.0169 7.85728 18.0158L7.07154 7.01582C7.04074 6.58186 6.66397 6.25508 6.23006 6.28588C5.7961 6.31668 5.46932 6.69346 5.50012 7.12737L6.28586 18.1274C6.31518 18.5394 6.65854 18.8583 7.07159 18.8573H7.12817C7.56107 18.8272 7.88762 18.4519 7.85751 18.019Z"/>
+                        <path d="M10.2136 6.28577C9.77964 6.28577 9.42786 6.63755 9.42786 7.0715V18.0715C9.42786 18.5054 9.77964 18.8572 10.2136 18.8572C10.6475 18.8572 10.9993 18.5054 10.9993 18.0715V7.0715C10.9993 6.63755 10.6475 6.28577 10.2136 6.28577Z"/>
+                        <path d="M14.1984 6.28588C13.7644 6.25508 13.3877 6.58186 13.3569 7.01582L12.5712 18.0158C12.5393 18.4486 12.8644 18.8252 13.2971 18.857C13.2985 18.8571 13.2998 18.8572 13.3011 18.8573H13.3569C13.77 18.8583 14.1133 18.5393 14.1426 18.1274L14.9284 7.12737C14.9592 6.69346 14.6323 6.31673 14.1984 6.28588Z"/>
+                    </g>
+                </symbol>
+            </svg>
+            <main class="content">
+                <article class="headcrumbs">
+                    <div class="container">
+                        <div class="headcrumbs__row">
+                            <a href="#">Главная</a>
+                            <img src="img/svgicons/crumbs.svg" alt="">
+                            <p>Страница</p>
+                        </div>
+                    </div>
+                </article>
+                <section class="cart">
+                    <div class="container">
+                        <div class="title">Оформление заказа</div>
+                        <div class="cart__row">
+                            <div class="cart__body">
+                                <div class="cart__item">
+                                    <div class="cart__title">Способ доставки</div>
+                                    <div class="cart__select">Доставка почтой</div>
+                                    <div class="cart__title">Ваш заказ</div>
+                                    <div class="cart__orders">
+                                        <div class="cart__order order-cart">
+                                            <div class="order-cart__img">
+                                                <img src="img/series/small.png" alt="">
+                                            </div>
+                                            <div class="order-cart__info">
+                                                <p>Петля автовозвратная Design</p>
+                                                <p>10 шт.</p>
+                                            </div>
+                                            <div class="order-cart__price">
+                                                3 069 ₽
+                                            </div>
+                                            <div class="order-cart__delete">
+                                                <svg>
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="cart__order order-cart">
+                                            <div class="order-cart__img">
+                                                <img src="img/series/small.png" alt="">
+                                            </div>
+                                            <div class="order-cart__info">
+                                                <p>Петля автовозвратная Design</p>
+                                                <p>10 шт.</p>
+                                            </div>
+                                            <div class="order-cart__price">
+                                                3 069 ₽
+                                            </div>
+                                            <div class="order-cart__delete">
+                                                <svg>
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="cart__order order-cart">
+                                            <div class="order-cart__img">
+                                                <img src="img/series/small.png" alt="">
+                                            </div>
+                                            <div class="order-cart__info">
+                                                <p>Петля автовозвратная Design</p>
+                                                <p>10 шт.</p>
+                                            </div>
+                                            <div class="order-cart__price">
+                                                3 069 ₽
+                                            </div>
+                                            <div class="order-cart__delete">
+                                                <svg>
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="cart__order order-cart">
+                                            <div class="order-cart__img">
+                                                <img src="img/series/small.png" alt="">
+                                            </div>
+                                            <div class="order-cart__info">
+                                                <p>Петля автовозвратная Design</p>
+                                                <p>10 шт.</p>
+                                            </div>
+                                            <div class="order-cart__price">
+                                                3 069 ₽
+                                            </div>
+                                            <div class="order-cart__delete">
+                                                <svg>
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart__total">
+                                        <p>34 товара</p>
+                                        <span>|</span>
+                                        <div class="cart__edit">
+                                            Редактировать заказ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__title">
+                                        <span>Шаг 1</span>
+                                        Адрес и доставка
+                                    </div>
+                                    <div class="cart__subtitle">Ваш город</div>
+                                    <div class="cart__select">Москва</div>
+                                    <div class="cart__delivery delivery-cart">
+                                        <div class="delivery-cart__title">Выберите способ доставки</div>
+                                        <div class="delivery-cart__row">
+                                            <div class="delivery-cart__ways">
+                                                <div class="delivery-cart__way">
+                                                    <div class="delivery-cart__company">Yandex GO</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__way">
+                                                    <div class="delivery-cart__company">Yandex GO</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__way">
+                                                    <div class="delivery-cart__company">Yandex GO</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__way">
+                                                    <div class="delivery-cart__company">Yandex GO</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__way">
+                                                    <div class="delivery-cart__company">Yandex GO</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                            </div>
+                                            <div class="delivery-cart__tabs">
+                                                <div class="delivery-cart__tab">
+                                                    <div class="delivery-cart__title">Доставка Yandex GO 2</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__img">
+                                                        <img src="img/cart/1.png" alt="">
+                                                    </div>
+                                                    <div class="delivery-cart__subtitle">Расстояние до МКАД 1 км (35 руб.)</div>
+                                                    <input type="text" class="cart__input">
+                                                    <div class="delivery-cart__subtitle">Стоимость доставки</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__tab">
+                                                    <div class="delivery-cart__title">Доставка Yandex GO 3</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__img">
+                                                        <img src="img/cart/1.png" alt="">
+                                                    </div>
+                                                    <div class="delivery-cart__subtitle">Расстояние до МКАД 1 км (35 руб.)</div>
+                                                    <input type="text" class="cart__input">
+                                                    <div class="delivery-cart__subtitle">Стоимость доставки</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__tab">
+                                                    <div class="delivery-cart__title">Доставка Yandex GO 4</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__img">
+                                                        <img src="img/cart/1.png" alt="">
+                                                    </div>
+                                                    <div class="delivery-cart__subtitle">Расстояние до МКАД 1 км (35 руб.)</div>
+                                                    <input type="text" class="cart__input">
+                                                    <div class="delivery-cart__subtitle">Стоимость доставки</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                                <div class="delivery-cart__tab">
+                                                    <div class="delivery-cart__title">Доставка Yandex GO 5</div>
+                                                    <div class="delivery-cart__subtitle">по Москве и Московской области</div>
+                                                    <div class="delivery-cart__img">
+                                                        <img src="img/cart/1.png" alt="">
+                                                    </div>
+                                                    <div class="delivery-cart__subtitle">Расстояние до МКАД 1 км (35 руб.)</div>
+                                                    <input type="text" class="cart__input">
+                                                    <div class="delivery-cart__subtitle">Стоимость доставки</div>
+                                                    <div class="delivery-cart__price">550 ₽</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__title">
+                                        <span>Шаг 2</span>
+                                        Получатель
+                                    </div>
+                                    <div class="cart__inputs-row three">
+                                        <label class="cart__input-row">
+                                            <div class="cart__input-title">Фамилия</div>
+                                            <input type="text" class="cart__input">
+                                        </label>
+                                        <label class="cart__input-row">
+                                            <div class="cart__input-title">Имя</div>
+                                            <input type="text" class="cart__input">
+                                        </label>
+                                        <label class="cart__input-row">
+                                            <div class="cart__input-title">Отчество</div>
+                                            <input type="text" class="cart__input">
+                                        </label>
+                                    </div>
+                                    <div class="delivery-cart__subtitle">Полные фамилия, имя и отчество могут потребоваться при получении заказа</div>
+                                    <div class="cart__inputs-row two">
+                                        <label class="cart__input-row">
+                                            <div class="cart__input-title">Ваш телефон</div>
+                                            <input type="tel" class="cart__input">
+                                            <div class="delivery-cart__subtitle">Номер телефона используется для оповещений об изменениях статуса заказа</div>
+                                        </label>
+                                        <label class="cart__input-row">
+                                            <div class="cart__input-title">Ваша e-mail</div>
+                                            <input type="email" class="cart__input">
+                                            <div class="delivery-cart__subtitle">Необходим для отправки чека</div>
+                                        </label>
+                                    </div>
+                                    <label class="cart__input-row big">
+                                        <div class="cart__input-title">Комментарий к заказу</div>
+                                        <textarea type="text" class="cart__input"></textarea>
+                                    </label>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__title">
+                                        <span>Шаг 3</span>
+                                        Оплата
+                                    </div>
+                                    <div class="cart__input-title">Выберите способ оплаты</div>
+                                    <div class="cart__pays">
+                                        <div class="cart__pay">
+                                            <p>
+                                                Оплата картой 
+                                                онлайн
+                                            </p>
+                                            <img src="img/cart/pay.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cart__gotopay">
+                                        <a href="#" class="cart__btn">Оплатить онлайн</a>
+                                        <p>Нажимая «Перейти к оплате», вы соглашаетесь с условиями использования интернет-магазина</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <aside class="cart__aside aside-cart">
+                                <div class="aside-cart__row cart__item">
+                                    <header class="aside-cart__header">
+                                        <input type="text" class="cart__input">
+                                        <a href="#" class="cart__btn">Применить</a>
+                                    </header>
+                                    <main class="aside-cart__body">
+                                        <div class="aside-cart__item">
+                                            <p>Сумма заказа</p>
+                                            <div class="undeline"></div>
+                                            <p>3 410 ₽</p>
+                                        </div>
+                                        <div class="aside-cart__item">
+                                            <p>Доставка</p>
+                                            <div class="undeline"></div>
+                                            <p>3 410 ₽</p>
+                                        </div>
+                                        <div class="aside-cart__item">
+                                            <p>Скидка</p>
+                                            <div class="undeline"></div>
+                                            <p>3 410 ₽</p>
+                                        </div>
+                                    </main>
+                                    <footer class="aside-cart__footer">
+                                        <div class="aside-cart__total">
+                                            <p>Итого</p>
+                                            <p>32 товара / 1,200 кг</p>
+                                        </div>
+                                        <div class="aside-cart__price">
+                                            <p>3 410 ₽</p>
+                                            <p>3 069 ₽</p>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer__row">
+            <div class="footer__item no-padding">
+                <div class="footer__logo">
+                    <img src="img/svgicons/logo.svg" alt="logo">
+                </div>
+                <p class="footer__copy">
+                    © ООО "Евростиль", 2014
+                    <br>
+                    2023ИНН 780416691679
+                </p>
+                <a href="#" class="footer__link">Договор оферты</a>
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link">Условия</a>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">
+                    Каталог
+                </div>
+                <nav>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#">Серия ST Cabine Plastic</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия ST Cabine Steel (304)</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Design</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Lotos</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Loft</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Bronze</a>
+                        </li>
+                        <li>
+                            <a href="#">Все серии</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">
+                    Серии
+                </div>
+                <nav>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#">Серия ST Cabine Plastic</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия ST Cabine Steel (304)</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Design</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Lotos</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Loft</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Bronze</a>
+                        </li>
+                        <li>
+                            <a href="#">Все серии</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__item footer-info">
+                <div class="footer__title">Контакты</div>
+                <div class="footer-info__row">
+                    <ul>
+                        <li>
+                            <a href="tel:8(931)599-61-48" class="footer__tel">
+                                <img src="img/svgicons/phone-white.svg" alt="">
+                                8(931)599-61-48
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:8(495)150-65-51" class="footer__tel">
+                                <img src="img/svgicons/phone-white.svg" alt="">
+                                8(495)150-65-51
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:avp@4restroom.ru" class="footer__mail">
+                                <img src="img/svgicons/mail.svg" alt="">
+                                avp@4restroom.ru
+                            </a>
+                        </li>
+                        <li>
+                            <img src="img/svgicons/time.svg" alt="">
+                            Офис: Пн-Пт с 8:30 до 17:00
+                            <br>
+                            Склад: Пн-Пт с 8:00 до 16:30
+                            <br>
+                            Сб-Вс: выходной
+                        </li>
+                    </ul>
+                    <div>
+                        <ul class="footer__geo">
+                            <li>
+                                <img src="img/svgicons/geo.svg" alt="">
+                                195220, Санкт-Петербург,
+                                <br>
+                                ул. Верности, дом 17, пом. 842
+                                <br>
+                                <a href="#">Посмотреть на карте</a>
+                            </li>
+                            <li>
+                                <img src="img/svgicons/geo.svg" alt="">
+                                109052, Москва,
+                                <br>
+                                Нижегородская ул., д. 66
+                                <br>
+                                <a href="#">Посмотреть на карте</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="kruw">
+                            <img src="img/svgicons/kruw.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </body>
+</html>

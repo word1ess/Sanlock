@@ -1,0 +1,408 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="js/app.min.js"></script>
+    <title>Главная</title>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/svgicons/logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <div class="header__menu">
+                <a href="lk.html" class="header__lk">
+                    <img src="img/svgicons/lk.svg" alt="">
+                    <p>Кабинет</p>
+                </a>
+                <div class="header__links">
+                    <a href="#">О компании</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Доставка</a>
+                    <a href="#">Контакты</a>
+                    <div class="language">
+                        Ru
+                    </div>
+                </div>
+                <a href="#" class="header__cart">
+                    <img src="img/svgicons/cart.svg" alt="">
+                    <div class="text">
+                        <p>В корзине</p>
+                        <p id="total" class="sum">12 329 ₽</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <main class="content">
+                <section class="intro">
+                    <img src="img/index/intro.png" alt="intro" class="intro__bg">
+                    <p class="intro__name">sanlock</p>
+                    <div class="container">
+                        <div class="intro__row">
+                            <div class="intro__title">
+                                <img src="img/svgicons/logo-small.svg" alt="logo">
+                                <h1>
+                                    Фурнитура и профиль для туалетных кабин
+                                    <br>
+                                    <span>sanlock</span>
+                                </h1>
+                            </div>
+                            <div class="intro__btns">
+                                <a href="#">Каталог</a>
+                                <a href="#">Cерии</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="about">
+                    <div class="container">
+                        <div class="about__row">
+                            <div class="about__info">
+                                <h2 class="title white">Текст о нас</h2>
+                                <p class="text white">
+                                    Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России.
+                                </p>
+                            </div>
+                            <div class="about__img">
+                                <img src="img/index/about.png" alt="about">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="series">
+                    <div class="container">
+                        <div class="title">Серии</div>
+                        <div class="series__row">
+                            <a href="#" class="series__item black down big">
+                                <img src="img/index/series-1.png" alt="series">
+                                <div class="series__title">
+                                    Серия
+                                    <br>
+                                    ST Cabine Plastic
+                                </div>
+                                <div class="series__subtitle">
+                                    Материал пластик
+                                </div>
+                                <p class="series__text">
+                                    Фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего.
+                                </p>
+                            </a>
+                            <a href="#" class="series__item">
+                                <img src="img/index/series-2.png" alt="series">
+                                <div class="series__title">
+                                    Серия
+                                    ST Cabine Steel
+                                </div>
+                                <div class="series__subtitle">
+                                    Материал алюминий
+                                </div>
+                            </a>
+                            <a href="#" class="series__item left big">
+                                <img src="img/index/series-3.png" alt="series">
+                                <div class="series__info">
+                                    <div class="series__title">
+                                        Серия Lotos
+                                    </div>
+                                    <div class="series__subtitle">
+                                        Материал алюминий
+                                    </div>
+                                    <p class="series__text">
+                                        Фурнитуры для сантехнических и душевых
+                                        кабин в России. Мы также доставляем фурнитуру в страны ближнего.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="series__item">
+                                <img src="img/index/series-4.png" alt="series">
+                                <div class="series__title">
+                                    Серия Design
+                                </div>
+                                <div class="series__subtitle">
+                                    Цвет серый, материал алюминий
+                                </div>
+                            </a>
+                            <a href="#" class="series__item">
+                                <img src="img/index/series-5.png" alt="series">
+                                <div class="series__title">
+                                    Серия Bronze
+                                </div>
+                                <div class="series__subtitle">
+                                    Материал алюминий
+                                </div>
+                            </a>
+                            <a href="#" class="series__item black all">
+                                <img src="img/svgicons/series.svg" alt="series">
+                                <div class="series__title">
+                                    Все серии
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <article class="categories blue">
+                    <div class="container">
+                        <div class="categories__title title white">Категории товаров</div>
+                        <div class="categories__row">
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/1.png" alt="categories">
+                                </div>
+                                <p>Замки</p>
+                            </a>
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/2.png" alt="categories">
+                                </div>
+                                <p>Петли</p>
+                            </a>
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/3.png" alt="categories">
+                                </div>
+                                <p>Ручки</p>
+                            </a>
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/4.png" alt="categories">
+                                </div>
+                                <p>Ножки</p>
+                            </a>
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/5.png" alt="categories">
+                                </div>
+                                <p>Петли</p>
+                            </a>
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/6.png" alt="categories">
+                                </div>
+                                <p>Крепежи</p>
+                            </a>
+                            <a href="#" class="categories__item">
+                                <div class="categories__img">
+                                    <img src="img/categories/7.png" alt="categories">
+                                </div>
+                                <p>Крючки</p>
+                            </a>
+                            <a href="#" class="categories__item all">
+                                <div class="categories__img">
+                                    <img src="img/svgicons/fur.svg" alt="categories">
+                                </div>
+                                <p>Вся фурнитура</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <section class="gen">
+                    <div class="container">
+                        <div class="gen__row">
+                            <div class="gen__info">
+                                <div class="gen__title title">Обращение ген директора</div>
+                                <p class="text">
+                                    Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья.
+                                </p>
+                                <div class="gen__print">
+                                    <img src="img/index/gen-print.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gen__img">
+                                <img src="img/index/gen.png" alt="" class="gen__gen">
+                                <img src="img/index/gen-bg.png" alt="" class="gen__bg">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="form">
+                    <div class="container">
+                        <form action="#" class="form__row">
+                            <div class="form__info">
+                                <div class="form__title title white">
+                                    Подберем фурнитуру
+                                    для объекта по смете
+                                </div>
+                                <p class="text white">
+                                    Sanlock - это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке.
+                                </p>
+                            </div>
+                            <div class="form__inputs">
+                                <div class="form__inputs-row">
+                                    <input name="name" type="name" placeholder="Имя">
+                                    <input name="phone" type="phone" placeholder="Телефон">
+                                    <input name="mail" type="mail" placeholder="Почта">
+                                    <textarea name="message" placeholder="Запрос на просчет"></textarea>
+                                </div>
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="container">
+                        <div class="title">
+                            Текст о компании
+                        </div>
+                        <p class="text">
+                            Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья.
+                        </p>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer__row">
+            <div class="footer__item no-padding">
+                <div class="footer__logo">
+                    <img src="img/svgicons/logo.svg" alt="logo">
+                </div>
+                <p class="footer__copy">
+                    © ООО "Евростиль", 2014
+                    <br>
+                    2023ИНН 780416691679
+                </p>
+                <a href="#" class="footer__link">Договор оферты</a>
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link">Условия</a>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">
+                    Каталог
+                </div>
+                <nav>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#">Серия ST Cabine Plastic</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия ST Cabine Steel (304)</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Design</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Lotos</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Loft</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Bronze</a>
+                        </li>
+                        <li>
+                            <a href="#">Все серии</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">
+                    Серии
+                </div>
+                <nav>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#">Серия ST Cabine Plastic</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия ST Cabine Steel (304)</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Design</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Lotos</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Loft</a>
+                        </li>
+                        <li>
+                            <a href="#">Серия Bronze</a>
+                        </li>
+                        <li>
+                            <a href="#">Все серии</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__item footer-info">
+                <div class="footer__title">Контакты</div>
+                <div class="footer-info__row">
+                    <ul>
+                        <li>
+                            <a href="tel:8(931)599-61-48" class="footer__tel">
+                                <img src="img/svgicons/phone-white.svg" alt="">
+                                8(931)599-61-48
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:8(495)150-65-51" class="footer__tel">
+                                <img src="img/svgicons/phone-white.svg" alt="">
+                                8(495)150-65-51
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:avp@4restroom.ru" class="footer__mail">
+                                <img src="img/svgicons/mail.svg" alt="">
+                                avp@4restroom.ru
+                            </a>
+                        </li>
+                        <li>
+                            <img src="img/svgicons/time.svg" alt="">
+                            Офис: Пн-Пт с 8:30 до 17:00
+                            <br>
+                            Склад: Пн-Пт с 8:00 до 16:30
+                            <br>
+                            Сб-Вс: выходной
+                        </li>
+                    </ul>
+                    <div>
+                        <ul class="footer__geo">
+                            <li>
+                                <img src="img/svgicons/geo.svg" alt="">
+                                195220, Санкт-Петербург,
+                                <br>
+                                ул. Верности, дом 17, пом. 842
+                                <br>
+                                <a href="#">Посмотреть на карте</a>
+                            </li>
+                            <li>
+                                <img src="img/svgicons/geo.svg" alt="">
+                                109052, Москва,
+                                <br>
+                                Нижегородская ул., д. 66
+                                <br>
+                                <a href="#">Посмотреть на карте</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="kruw">
+                            <img src="img/svgicons/kruw.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </body>
+</html>
