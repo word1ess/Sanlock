@@ -258,6 +258,11 @@ h6 {
 }
 .header__links a {
   font-size: 14px;
+  color: #fff;
+  transition: all 300ms ease;
+}
+.header__links a:hover {
+  color: rgb(230, 229, 229);
 }
 .header__cart {
   min-width: 144px;
@@ -320,6 +325,10 @@ h6 {
   color: #2d2b2d;
   font-size: 22px;
   font-weight: 500;
+  transition: all 300ms ease;
+}
+.categories__item:hover {
+  transform: scale(1.05);
 }
 .categories__item img {
   flex: 1 1 auto;
@@ -537,6 +546,10 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition: all 300ms ease;
+}
+.series__item:hover {
+  transform: scale(1.05);
 }
 .series__item img {
   position: absolute;
@@ -1302,6 +1315,11 @@ h6 {
   padding: 36px 20px 44px;
   align-items: center;
   background: #f8f8f8;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+.hinges__item:hover {
+  background: linear-gradient(0deg, #e8e8eb -32.72%, rgba(232, 232, 235, 0) 70.58%);
 }
 .hinges__img {
   position: relative;
@@ -1379,6 +1397,7 @@ h6 {
   border-radius: 12px;
   background: #1facc7;
   flex: 0 0 35px;
+  cursor: pointer;
 }
 .hinges__pagintaion .left__arrow::after,
 .hinges__pagintaion .right__arrow::after {
@@ -1430,13 +1449,42 @@ h6 {
 }
 .cart__title {
   color: #3b3b3b;
-  margin: 0px 0px 24px;
   font-size: 20px;
   font-weight: 700;
   line-height: 120%; /* 24px */
+  cursor: pointer;
+  position: relative;
+  margin: 0px 0px 16px;
 }
 .cart__title span {
   color: #05839b;
+}
+.cart__slide {
+  margin: 0px;
+}
+.cart__slide::after, .cart__slide::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  background: #05839b;
+  width: 10px;
+  height: 4px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+}
+.cart__slide::after {
+  right: 0px;
+  transform: rotate(45deg);
+}
+.cart__slide.active::after {
+  transform: rotate(-45deg);
+}
+.cart__slide.active::before {
+  transform: rotate(45deg);
+}
+.cart__hidden {
+  margin: 24px 0px 0px;
 }
 .cart__subtitle {
   color: #3b3b3b;
@@ -1797,6 +1845,9 @@ h6 {
 .footer__item .no-padding {
   padding: 0px;
 }
+.footer__item .kruw-mobile {
+  display: none;
+}
 .footer__logo {
   position: relative;
   overflow: hidden;
@@ -1930,6 +1981,22 @@ body {
   height: 100%;
   padding: 0 30px;
   position: relative;
+}
+
+input,
+textarea {
+  transition: all 300ms ease;
+}
+input:focus,
+textarea:focus {
+  border-color: #1facc7;
+}
+
+button {
+  transition: all 300ms ease;
+}
+button:hover {
+  opacity: 0.9;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -2067,6 +2134,16 @@ body {
   }
   .cart__aside {
     flex: none;
+  }
+  .footer__item {
+    width: 100%;
+  }
+  .footer__item:not(:first-child) {
+    display: none;
+  }
+  .footer__item .kruw-mobile {
+    display: block;
+    margin: 16px 0px 0px;
   }
 }
 @media only screen and (max-width: 768px) {
