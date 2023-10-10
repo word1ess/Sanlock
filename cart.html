@@ -36,8 +36,23 @@
                     <a href="#">Акции</a>
                     <a href="#">Доставка</a>
                     <a href="#">Контакты</a>
-                    <div class="language">
-                        Ru
+                    <div class="lang" data-currLang="Russian">
+                        <header class="lang__header">
+                            <img src="img/svgicons/ru.svg" alt="lang">
+                            <p class="lang__currLang">Ru</p>
+                        </header>
+                        <main class="lang__body">
+                            <ul>
+                                <li class="selector-for-lang" data-select-lang="English">
+                                    <img src="img/svgicons/ru.svg" alt="lang">
+                                    En
+                                </li>
+                                <li class="selector-for-lang" data-select-lang="Russian">
+                                    <img src="img/svgicons/ru.svg" alt="lang">
+                                    Ru
+                                </li>
+                            </ul>
+                        </main>
                     </div>
                 </div>
                 <a href="#" class="header__cart">
@@ -72,7 +87,7 @@
                         </div>
                     </div>
                 </article>
-                <section class="cart">
+                <section class="cart section">
                     <div class="container">
                         <div class="title">Оформление заказа</div>
                         <div class="cart__row">
@@ -93,11 +108,13 @@
                                             <div class="order-cart__price">
                                                 3 069 ₽
                                             </div>
-                                            <div class="order-cart__delete">
-                                                <svg>
-                                                    <use xlink:href="#delete"></use>
-                                                </svg>
-                                            </div>
+                                            <form class="order-cart__delete">
+                                                <button>
+                                                    <svg>
+                                                        <use xlink:href="#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </form>
                                         </div>
                                         <div class="cart__order order-cart">
                                             <div class="order-cart__img">
@@ -110,11 +127,13 @@
                                             <div class="order-cart__price">
                                                 3 069 ₽
                                             </div>
-                                            <div class="order-cart__delete">
-                                                <svg>
-                                                    <use xlink:href="#delete"></use>
-                                                </svg>
-                                            </div>
+                                            <form class="order-cart__delete">
+                                                <button>
+                                                    <svg>
+                                                        <use xlink:href="#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </form>
                                         </div>
                                         <div class="cart__order order-cart">
                                             <div class="order-cart__img">
@@ -127,11 +146,13 @@
                                             <div class="order-cart__price">
                                                 3 069 ₽
                                             </div>
-                                            <div class="order-cart__delete">
-                                                <svg>
-                                                    <use xlink:href="#delete"></use>
-                                                </svg>
-                                            </div>
+                                            <form class="order-cart__delete">
+                                                <button>
+                                                    <svg>
+                                                        <use xlink:href="#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </form>
                                         </div>
                                         <div class="cart__order order-cart">
                                             <div class="order-cart__img">
@@ -144,11 +165,13 @@
                                             <div class="order-cart__price">
                                                 3 069 ₽
                                             </div>
-                                            <div class="order-cart__delete">
-                                                <svg>
-                                                    <use xlink:href="#delete"></use>
-                                                </svg>
-                                            </div>
+                                            <form class="order-cart__delete">
+                                                <button>
+                                                    <svg>
+                                                        <use xlink:href="#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="cart__total">

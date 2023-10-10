@@ -36,8 +36,23 @@
                     <a href="#">Акции</a>
                     <a href="#">Доставка</a>
                     <a href="#">Контакты</a>
-                    <div class="language">
-                        Ru
+                    <div class="lang" data-currLang="Russian">
+                        <header class="lang__header">
+                            <img src="img/svgicons/ru.svg" alt="lang">
+                            <p class="lang__currLang">Ru</p>
+                        </header>
+                        <main class="lang__body">
+                            <ul>
+                                <li class="selector-for-lang" data-select-lang="English">
+                                    <img src="img/svgicons/ru.svg" alt="lang">
+                                    En
+                                </li>
+                                <li class="selector-for-lang" data-select-lang="Russian">
+                                    <img src="img/svgicons/ru.svg" alt="lang">
+                                    Ru
+                                </li>
+                            </ul>
+                        </main>
                     </div>
                 </div>
                 <a href="#" class="header__cart">
@@ -92,21 +107,38 @@
                         </div>
                     </div>
                 </div>
-                <section class="hinges">
+                <section class="hinges section">
                     <div class="container">
                         <div class="hinges__row">
                             <header class="hinges__header">
                                 <div class="title">Выберите серию</div>
                                 <div class="hinges__sort">
                                     <span>Сортировать по:</span>
+                                    <div class="sort" data-currsort="Price">
+                                        <header class="sort__header">
+                                            <p class="sort__currSort">По цене</p>
+                                        </header>
+                                        <main class="sort__body">
+                                            <ul>
+                                                <li class="selector-for-sort" data-select-sort="Price">
+                                                    По цене
+                                                </li>
+                                                <li class="selector-for-sort" data-select-sort="Price">
+                                                    По цене
+                                                </li>
+                                            </ul>
+                                        </main>
+                                    </div>
                                 </div>
                             </header>
                             <main class="hinges__body">
-                                <p class="text">
-                                    Предлагаем вашему вниманию в широком ассортименте петли для туалетных кабин и сантехнических перегородок, в том числе петли автовозвратные, с доводчиками, металлические, пластиковые накладные оптом и в розницу в интернет магазине «Евростиль»
-                                </p>
+                                <div class="text">
+                                    <p>
+                                        Предлагаем вашему вниманию в широком ассортименте петли для туалетных кабин и сантехнических перегородок, в том числе петли автовозвратные, с доводчиками, металлические, пластиковые накладные оптом и в розницу в интернет магазине «Евростиль»
+                                    </p>
+                                </div>
                                 <div class="hinges__items">
-                                    <div class="hinges__item">
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -115,14 +147,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -131,14 +163,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -147,14 +179,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -163,14 +195,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -179,14 +211,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -195,14 +227,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -211,14 +243,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -227,14 +259,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -243,14 +275,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -259,14 +291,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -275,14 +307,14 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
-                                    <div class="hinges__item">
+                                        </button>
+                                    </form>
+                                    <form action="#" class="hinges__item">
                                         <div class="hinges__img">
                                             <img src="img/series/small.png" alt="series">
                                         </div>
@@ -291,13 +323,13 @@
                                                 цинк 75*50 мм
                                         </p>
                                         <p class="hinges__price">52,00 Р</p>
-                                        <a href="#" class="hinges__btn">
+                                        <button class="hinges__btn">
                                             <svg>
                                                 <use xlink:href="#cart"></use>
                                             </svg>
                                             В корзину
-                                        </a>
-                                    </div>
+                                        </button>
+                                    </form>
                                 </div>
                             </main>
                             <footer class="hinges__pagintaion">
@@ -314,11 +346,13 @@
                         </div>
                     </div>
                 </section>
-                <section class="section">
+                <section class="section section">
                     <div class="container">
                         <div class="title">Текст СЕО</div>
                         <div class="text">
-                            Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России.
+                            <p>
+                                Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России.
+                            </p>
                         </div>
                     </div>
                 </section>

@@ -36,8 +36,23 @@
                     <a href="#">Акции</a>
                     <a href="#">Доставка</a>
                     <a href="#">Контакты</a>
-                    <div class="language">
-                        Ru
+                    <div class="lang" data-currLang="Russian">
+                        <header class="lang__header">
+                            <img src="img/svgicons/ru.svg" alt="lang">
+                            <p class="lang__currLang">Ru</p>
+                        </header>
+                        <main class="lang__body">
+                            <ul>
+                                <li class="selector-for-lang" data-select-lang="English">
+                                    <img src="img/svgicons/ru.svg" alt="lang">
+                                    En
+                                </li>
+                                <li class="selector-for-lang" data-select-lang="Russian">
+                                    <img src="img/svgicons/ru.svg" alt="lang">
+                                    Ru
+                                </li>
+                            </ul>
+                        </main>
                     </div>
                 </div>
                 <a href="#" class="header__cart">
@@ -52,6 +67,15 @@
     </div>
 </header>
 
+            <svg display="none">
+                <symbol id="cart" viewBox="0 0 18 19">
+                    <g>
+                        <path d="M5.64063 1.8C5.64063 0.8075 4.89148 0 3.97071 0H0.556641C0.248894 0 0 0.268438 0 0.6C0 0.931562 0.248894 1.2 0.556641 1.2H3.97071C4.27787 1.2 4.52735 1.46891 4.53054 1.86625L5.58844 12.128C4.9686 12.3912 4.52735 13.0395 4.52735 13.8C4.52735 14.7925 5.27635 15.5995 6.19727 15.5995H6.8564C6.79407 15.7881 6.75391 15.9886 6.75391 16.2C6.75391 17.1925 7.50291 18 8.42383 18C9.34461 18 10.0938 17.1925 10.0938 16.2C10.0938 15.9886 10.0536 15.7881 9.99113 15.5995H13.5361C13.4738 15.7881 13.4336 15.9886 13.4336 16.2C13.4336 17.1925 14.1826 18 15.1035 18C16.0243 18 16.7735 17.1925 16.7735 16.2C16.7735 15.2073 16.0243 14.4 15.1035 14.4H6.19727C5.8901 14.4 5.64063 14.1309 5.64063 13.8C5.64063 13.4689 5.8901 13.2 6.19727 13.2H16.3868C17.2072 13.2 17.8998 12.5672 18.034 11.6958L18.9923 5.49844C19.0194 5.32437 18.9739 5.14687 18.8678 5.01203C18.7624 4.87734 18.6069 4.8 18.4434 4.8H5.95099L5.64063 1.8ZM14.5469 7.8C14.5469 7.46828 14.7958 7.2 15.1035 7.2C15.4111 7.2 15.6602 7.46828 15.6602 7.8V10.2C15.6602 10.5316 15.4111 10.8 15.1035 10.8C14.7958 10.8 14.5469 10.5316 14.5469 10.2V7.8ZM11.207 7.8C11.207 7.46828 11.4559 7.2 11.7637 7.2C12.0713 7.2 12.3203 7.46828 12.3203 7.8V10.2C12.3203 10.5316 12.0713 10.8 11.7637 10.8C11.4559 10.8 11.207 10.5316 11.207 10.2V7.8ZM7.86719 7.8C7.86719 7.46828 8.11609 7.2 8.42383 7.2C8.73144 7.2 8.98048 7.46828 8.98048 7.8V10.2C8.98048 10.5316 8.73144 10.8 8.42383 10.8C8.11609 10.8 7.86719 10.5316 7.86719 10.2V7.8Z"/>
+                        <path d="M17.3301 0H12.877C12.5692 0 12.3203 0.268438 12.3203 0.6V3.6H17.8867V0.6C17.8867 0.268438 17.6377 0 17.3301 0Z"/>
+                        <path d="M8.42383 1.2C8.11609 1.2 7.86719 1.46828 7.86719 1.8V3.6H11.207V1.2H8.42383Z"/>
+                    </g>
+                </symbol>
+            </svg>
             <main class="content">
                 <article class="headcrumbs">
                     <div class="container">
@@ -62,7 +86,7 @@
                         </div>
                     </div>
                 </article>
-                <section class="item">
+                <section class="item section">
                     <div class="container">
                         <div class="item__title title">
                             <p>Петля автовозвратная Design</p>
@@ -103,9 +127,11 @@
                                 </div>
                             </div>
                             <div class="item__info">
-                                <p class="text">
-                                    Предлагаем вашему вниманию в широком ассортименте петли для туалетных кабин и сантехнических перегородок, в том числе петли автовозвратные, с доводчиками, металлические, пластиковые накладные оптом и в розницу в интернет магазине «Евростиль»
-                                </p>
+                                <div class="text">
+                                    <p>
+                                        Предлагаем вашему вниманию в широком ассортименте петли для туалетных кабин и сантехнических перегородок, в том числе петли автовозвратные, с доводчиками, металлические, пластиковые накладные оптом и в розницу в интернет магазине «Евростиль»
+                                    </p>
+                                </div>
                                 <div class="item__desc">
                                     <div>
                                         <p>Материалсплав алюминия</p>
@@ -124,7 +150,7 @@
                                         <b>12-18 мм</b>
                                     </div>
                                 </div>
-                                <div class="item__bottom">
+                                <form action="#" class="item__bottom">
                                     <div>
                                         <b>Цена</b>
                                         <p class="item__price">52,00 Р</p>
@@ -142,21 +168,23 @@
                                         </div>
                                     </div>
                                     <div class="item__btns">
-                                        <a href="#" class="item__btn active">В корзину</a>
+                                        <button class="item__btn active">В корзину</button>
                                         <a href="#" class="item__btn">Скачать КП</a>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="item-desc">
+                <section class="item-desc section">
                     <div class="container">
                         <div class="item-desc__title">Описание</div>
-                        <p class="text">Предлагаем вашему вниманию в широком ассортименте петли для туалетных кабин и сантехнических перегородок, в том числе петли автовозвратные, с доводчиками, металлические, пластиковые накладные оптом и в розницу в интернет магазине «Евростиль»</p>
+                        <div class="text">
+                            <p>Предлагаем вашему вниманию в широком ассортименте петли для туалетных кабин и сантехнических перегородок, в том числе петли автовозвратные, с доводчиками, металлические, пластиковые накладные оптом и в розницу в интернет магазине «Евростиль»</p>
+                        </div>
                     </div>
                 </section>
-                <section class="why">
+                <section class="why section">
                     <div class="container">
                         <div class="why__title">Почему стоит заказать у нас?</div>
                         <div class="why__row">
@@ -222,15 +250,17 @@
                                 </p>
                             </div>
                         </div>
-                        <p class="text">Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья.</p>
+                        <div class="text">
+                            <p>Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья. Компания «Евростиль» — это эксперт в области изготовления фурнитуры, сантехнических перегородок и дверей. Мы на рынке с 2000 года, и за это время стали лидерами на рынке фурнитуры для сантехнических и душевых кабин в России. Мы также доставляем фурнитуру в страны ближнего зарубежья.</p>
+                        </div>
                     </div>
                 </section>
-                <article class="hinges">
+                <article class="hinges article">
                     <div class="container">
                         <div class="hinges__title title">Дополнить серии</div>
                         <div class="swiper hinges__slider">
                             <div class="hinges__row swiper-wrapper">
-                                <div class="hinges__item swiper-slide">
+                                <form action="#" class="hinges__item swiper-slide">
                                     <div class="hinges__img">
                                         <img src="img/series/small.png" alt="series">
                                     </div>
@@ -239,12 +269,14 @@
                                             цинк 75*50 мм
                                     </p>
                                     <p class="hinges__price">52,00 Р</p>
-                                    <a href="#" class="hinges__btn">
-                                        <img src="img/svgicons/cart.svg" alt="">
+                                    <button class="hinges__btn">
+                                        <svg>
+                                            <use xlink:href="#cart"></use>
+                                        </svg>
                                         В корзину
-                                    </a>
-                                </div>
-                                <div class="hinges__item swiper-slide">
+                                    </button>
+                                </form>
+                                <form action="#" class="hinges__item swiper-slide">
                                     <div class="hinges__img">
                                         <img src="img/series/small.png" alt="series">
                                     </div>
@@ -253,12 +285,14 @@
                                             цинк 75*50 мм
                                     </p>
                                     <p class="hinges__price">52,00 Р</p>
-                                    <a href="#" class="hinges__btn">
-                                        <img src="img/svgicons/cart.svg" alt="">
+                                    <button class="hinges__btn">
+                                        <svg>
+                                            <use xlink:href="#cart"></use>
+                                        </svg>
                                         В корзину
-                                    </a>
-                                </div>
-                                <div class="hinges__item swiper-slide">
+                                    </button>
+                                </form>
+                                <form action="#" class="hinges__item swiper-slide">
                                     <div class="hinges__img">
                                         <img src="img/series/small.png" alt="series">
                                     </div>
@@ -267,12 +301,14 @@
                                             цинк 75*50 мм
                                     </p>
                                     <p class="hinges__price">52,00 Р</p>
-                                    <a href="#" class="hinges__btn">
-                                        <img src="img/svgicons/cart.svg" alt="">
+                                    <button class="hinges__btn">
+                                        <svg>
+                                            <use xlink:href="#cart"></use>
+                                        </svg>
                                         В корзину
-                                    </a>
-                                </div>
-                                <div class="hinges__item swiper-slide">
+                                    </button>
+                                </form>
+                                <form action="#" class="hinges__item swiper-slide">
                                     <div class="hinges__img">
                                         <img src="img/series/small.png" alt="series">
                                     </div>
@@ -281,12 +317,14 @@
                                             цинк 75*50 мм
                                     </p>
                                     <p class="hinges__price">52,00 Р</p>
-                                    <a href="#" class="hinges__btn">
-                                        <img src="img/svgicons/cart.svg" alt="">
+                                    <button class="hinges__btn">
+                                        <svg>
+                                            <use xlink:href="#cart"></use>
+                                        </svg>
                                         В корзину
-                                    </a>
-                                </div>
-                                <div class="hinges__item swiper-slide">
+                                    </button>
+                                </form>
+                                <form action="#" class="hinges__item swiper-slide">
                                     <div class="hinges__img">
                                         <img src="img/series/small.png" alt="series">
                                     </div>
@@ -295,11 +333,13 @@
                                             цинк 75*50 мм
                                     </p>
                                     <p class="hinges__price">52,00 Р</p>
-                                    <a href="#" class="hinges__btn">
-                                        <img src="img/svgicons/cart.svg" alt="">
+                                    <button class="hinges__btn">
+                                        <svg>
+                                            <use xlink:href="#cart"></use>
+                                        </svg>
                                         В корзину
-                                    </a>
-                                </div>
+                                    </button>
+                                </form>
                             </div>
                             <div class="swiper-button-prev hinges__slider-prev"></div>
                             <div class="swiper-button-next hinges__slider-next"></div>
