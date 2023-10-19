@@ -289,7 +289,7 @@ h6 {
 .catalog-header {
   z-index: -1;
   opacity: 0;
-  transform: translate(0px, -800px);
+  transform: translate(-250px, -800px);
   position: absolute;
   top: 95px;
   background: #1e8ba1;
@@ -299,7 +299,7 @@ h6 {
   transition: opacity 200ms ease-in, transform 400ms ease;
 }
 .catalog-header.active {
-  transform: translate(0px, 0px);
+  transform: translate(-250px, 0px);
   z-index: 4;
   opacity: 0.97;
 }
@@ -2340,6 +2340,31 @@ button:hover {
   }
 }
 @media only screen and (max-width: 992px) {
+  .catalog-header {
+    z-index: 2;
+    opacity: 1;
+    border-radius: 33px;
+    display: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform: none;
+    order: 9;
+  }
+  .catalog-header .title {
+    font-size: 18px;
+    margin: 0px 0px 8px;
+  }
+  .catalog-header .categories__item {
+    padding: 10px 0px;
+  }
+  .catalog-header .catalog-header__slider__series {
+    margin: 0px 0px 16px;
+  }
+  .catalog-header .swiper-button-next,
+  .catalog-header .swiper-button-prev {
+    display: none;
+  }
   .header__row {
     justify-content: space-between;
   }
@@ -2357,6 +2382,12 @@ button:hover {
     height: 2px;
     top: 9px;
     background: #1facc7;
+  }
+  .header__catalog {
+    order: 8;
+  }
+  .header__lk {
+    order: -1;
   }
   .header__burger::before, .header__burger::after {
     content: "";
@@ -2391,6 +2422,7 @@ button:hover {
     transition: transform 300ms ease 0ms, opacity 400ms ease-in 300ms;
     z-index: 0;
     flex-direction: column;
+    overflow-y: auto;
   }
   .header__menu.burger-active {
     transform: translate(0%, 0%);
