@@ -171,6 +171,9 @@ h6 {
   z-index: 2;
   background: #1e8ba1;
 }
+.header__index .catalog-header {
+  transform: translate(0px, 0px) !important;
+}
 .header__index::before {
   background: linear-gradient(180deg, #1e8ba1 5%, rgba(22, 173, 204, 0) 100%);
 }
@@ -297,6 +300,29 @@ h6 {
   padding: 20px 70px;
   border-radius: 0px 0px 33px 33px;
   transition: opacity 200ms ease-in, transform 400ms ease;
+}
+.catalog-header__close {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.catalog-header__close::before, .catalog-header__close::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 11px;
+  width: 3px;
+  height: 28px;
+  background: #fff;
+}
+.catalog-header__close::before {
+  rotate: 45deg;
+}
+.catalog-header__close::after {
+  rotate: -45deg;
 }
 .catalog-header.active {
   transform: translate(-250px, 0px);
@@ -2735,6 +2761,15 @@ button:hover {
   }
 }
 @media only screen and (max-width: 450px) {
+  .catalog-header {
+    padding: 20px 15px;
+  }
+  .catalog-header .title {
+    margin: 0px 0px 24px;
+  }
+  .catalog-header__close {
+    right: 20px;
+  }
   .title {
     margin: 0px 0px 16px;
   }
