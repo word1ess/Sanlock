@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script defer src="js/app.min.js"></script>
     <title>Товар из каталога</title>
 </head>
@@ -193,7 +193,10 @@
                 </article>
                 <div class="sereies-choose">
                     <div class="container">
-                        <h1 class="title">Выберите серию</h1>
+                        <h1>Петли</h1>
+                        <div class="text">
+                            <p>Выберите серию из представленных:</p>
+                        </div>
                         <div class="sereies-choose__row">
                             <a href="#" class="sereies-choose__item">
                                 <div class="sereies-choose__color brown"></div>
@@ -216,7 +219,7 @@
                     <div class="container">
                         <div class="hinges__row">
                             <header class="hinges__header">
-                                <h2>Петли</h2>
+                                <h2>Заголовок</h2>
                                 <div class="hinges__sort">
                                     <span>Сортировать по:</span>
                                     <div class="sort" data-currsort="Price">
@@ -244,6 +247,7 @@
                                 </div>
                                 <div class="hinges__items">
                                     <form action="#" class="hinges__item">
+                                        <div class="hinges__new">Новинка!</div>
                                         <a href="#">
                                             <div class="hinges__img">
                                                 <img src="img/series/small.png" alt="series">
@@ -261,7 +265,7 @@
                                             В корзину
                                         </button>
                                     </form>
-                                    <form action="#" class="hinges__item">
+                                    <form action="#" class="hinges__item disabled">
                                         <a href="#">
                                             <div class="hinges__img">
                                                 <img src="img/series/small.png" alt="series">
@@ -273,10 +277,10 @@
                                             <p class="hinges__price">52,00 Р</p>
                                         </a>
                                         <button class="hinges__btn">
-                                            <svg>
+                                            <!-- <svg>
                                                 <use xlink:href="#cart"></use>
-                                            </svg>
-                                            В корзину
+                                            </svg> -->
+                                            Нет в наличии
                                         </button>
                                     </form>
                                     <form action="#" class="hinges__item">

@@ -255,6 +255,9 @@ h6 {
 .header__catalog {
   gap: 8px;
 }
+.header__catalog.active::after {
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0.1) 15%, rgba(100, 100, 100, 0.31) 100%);
+}
 .header__catalog, .header__lk, .header__cart {
   cursor: pointer;
 }
@@ -1029,7 +1032,7 @@ h3 {
   padding: 15px 21px;
 }
 .form-contacts .form__inputs-row input {
-  padding: 17px 21px 17px 35px;
+  padding: 15px 21px;
   max-width: none;
 }
 .form-contacts .form__inputs-row textarea {
@@ -1258,13 +1261,15 @@ h3 {
   font-size: 16px;
   font-weight: 500;
   line-height: 135.023%; /* 21.604px */
-  background: #f8f8f8;
+  background: transparent;
+  text-align: center;
 }
 .item__minus, .item__plus {
   color: #1facc7;
   font-size: 16px;
   font-weight: 500;
   line-height: 135.023%; /* 21.604px */
+  cursor: pointer;
 }
 .item__btns {
   display: flex;
@@ -1496,6 +1501,12 @@ h3 {
   object-fit: fill;
 }
 
+.sereies-choose h1 {
+  margin: 0px 0px 16px;
+}
+.sereies-choose .text {
+  margin: 0px 0px 32px;
+}
 .sereies-choose__row {
   display: flex;
   gap: 22px;
@@ -1570,6 +1581,7 @@ h3 {
 .hinges .text p {
   text-align: left;
   font-weight: 300;
+  font-size: 16px;
 }
 .hinges__row {
   border-bottom: 1px solid #dfdfdf;
@@ -1638,9 +1650,32 @@ h3 {
   background: #fff;
   transition: all 300ms ease;
   cursor: pointer;
+  position: relative;
 }
 .hinges__item:hover {
   border-color: #05839b;
+}
+.hinges__item.disabled {
+  filter: grayscale(1);
+}
+.hinges__item.disabled button {
+  background: #1facc7;
+  color: #fff !important;
+}
+.hinges__new {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  color: #1a90a8;
+  font-size: 16px;
+  rotate: 15deg;
+  z-index: 2;
+  padding: 10px 15px;
+  background: rgba(43, 219, 255, 0.4549019608);
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border: 1.5px solid #1a90a8;
 }
 .hinges__img {
   position: relative;
@@ -1995,6 +2030,7 @@ h3 {
   display: block;
   margin: 0 auto;
   text-align: center;
+  background: transparent;
 }
 .order-cart__price {
   color: #1facc7;
